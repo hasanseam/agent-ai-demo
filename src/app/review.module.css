@@ -27,10 +27,54 @@
     display: inline-block;
 }
 
+/* Star rating styles */
+.star-rating {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-left: 8px;
+}
+
+.rating-label {
+    font-weight: 500;
+    color: #666;
+    margin-right: 5px;
+}
+
+.star-filled {
+    color: #FFD700; /* Gold color for filled stars */
+}
+
+.star-half {
+    position: relative;
+    display: inline-block;
+    color: #E0E0E0; /* Light gray for empty part */
+}
+
+.star-half::before {
+    content: '★';
+    position: absolute;
+    color: #FFD700; /* Gold color for filled part */
+    width: 50%;
+    overflow: hidden;
+}
+
+.rating-text {
+    margin-left: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Adjust the metadata spacing for the star rating */
 .metadata-title-text div:not(:last-child)::after {
     content: " | ";
     margin: 0 8px;
     color: #aaa;
+}
+
+/* Remove the divider after the star rating */
+.star-rating::after {
+    content: none;
 }
 
 .review-container {
@@ -89,6 +133,8 @@
     justify-content: center;
     width: 100%;
 }
+
+
 
 /* Material Design button */
 .check-price-button {

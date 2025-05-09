@@ -12,6 +12,15 @@ export default function Review() {
           <div>2 min read</div>
           <div>Nov 20,2024</div>
           <div>Updated April 27, 2025</div>
+          <div className={styles["star-rating"]}>
+            <span className={styles["rating-label"]}>Rating: </span>
+            <span className={styles["star-filled"]}>★</span>
+            <span className={styles["star-filled"]}>★</span>
+            <span className={styles["star-filled"]}>★</span>
+            <span className={styles["star-filled"]}>★</span>
+            <span className={styles["star-half"]}>★</span>
+            <span className={styles["rating-text"]}>4.5/5</span>
+          </div>
         </div>
       </div>
       <div className={styles["review-container"]}>

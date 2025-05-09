@@ -1,0 +1,149 @@
+.carouselContainer {
+    width: 100%;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .carouselTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .carouselControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .carouselButton {
+    background-color: #2d3748;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .carouselButton:hover {
+    background-color: #1a202c;
+  }
+  
+  .pageIndicator {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .reviewGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .reviewCard {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .reviewCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reviewImageContainer {
+    flex: 0 0 150px;
+    margin-right: 15px;
+  }
+  
+  .reviewImage {
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .reviewInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .reviewTitle {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .reviewRating {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+  
+  .ratingLabel {
+    font-weight: 500;
+    margin-right: 5px;
+    color: #666;
+  }
+  
+  .starFilled {
+    color: #FFD700;
+  }
+  
+  .starHalf {
+    position: relative;
+    display: inline-block;
+    color: #E0E0E0;
+  }
+  
+  .starHalf::before {
+    content: '★';
+    position: absolute;
+    color: #FFD700;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .ratingText {
+    margin-left: 5px;
+    color: #666;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .reviewGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .reviewCard {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .reviewImageContainer {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    
+    .carouselControls {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .pageIndicator {
+      order: -1;
+      margin-bottom: 10px;
+    }
+  }
+  
